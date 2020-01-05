@@ -67,7 +67,7 @@ def list_gists(json: str) -> None:
         return
 
     for gist in json:
-        print(" - {} - {} - {}".format(gist['id'], gist['created_at'], gist['description']))
+        print("{} - {} - {}".format(gist['id'], gist['created_at'], gist['description']))
 
 def get_timestamp() -> str:
     # Timezones are hard and github requires it this as Z is a special UTC designator
