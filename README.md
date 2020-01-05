@@ -3,22 +3,31 @@ Gist scanner for Equal Experts tech test
 
 ## Usage
 
-This tool only expects the main USERNAME argument. To search for public gists belonging to the user 'leeming', run the following
+This tool only expects the main USERNAME argument. To search for public gists belonging to the user 'ben', run the following
 
 ```
-python src/public_gist/public_gists.py leeming
+python src/public_gist/public_gists.py ben
 ```
 
 This will output a list of gists by the user with the following format: "[gist id] - [creation date] - [description]", e.g.
 
 ```
-366777776e64e5fb4e9e085561d2d787 - 2020-01-04T14:23:58Z - another example
-bbf842499d3a5273c36fdda876034ae7 - 2020-01-04T14:09:15Z - first example
+b3e189a1579fe8c004d986565e233a85 - 2019-01-26T01:02:16Z - SCRIPT-8
+52df4ee4d17a6c590a23f0a734cbe20e - 2016-05-27T16:06:03Z - Something like Hubot, implemented on top of Botkit
+e54a1625ce7f3567edcc - 2015-11-20T04:25:38Z - After-hours switchover
+10672053 - 2014-04-14T18:31:30Z - keybase.md
+9568641 - 2014-03-15T15:02:50Z - None
+6512874 - 2013-09-10T17:39:27Z - Libgit2 build results, before and after #1840
+5484410 - 2013-04-29T20:14:13Z - https://github.com/libgit2/libgit2/issues/1508
+4693571 - 2013-02-01T19:40:34Z - Clone example for http://ben.straub.cc/2013/02/01/stupid-libgit2-tricks-cloning/
+4593102 - 2013-01-22T08:43:47Z - Resources from introductory class at PHP Benelux
+4081592 - 2012-11-15T21:57:21Z - libgit2 summit notes
+2144073 - 2012-03-21T03:37:09Z - Multi-cpu timing with libgit2 under MSVC
 ```
 
 To enable debugging you can pass the `-v ` (`--verbose`) flag:
 ```
-python src/public_gist/public_gists.py -v leeming
+python src/public_gist/public_gists.py -v ben
 ```
 
 Any subsequent lookups for the same user's gists will only return new gists published after previously running the tool.
