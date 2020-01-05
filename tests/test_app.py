@@ -16,7 +16,7 @@ def test_public_gist_no_history():
     public_gists.user_timestamps=dict()
     assert len(public_gists.get_user_public_gist("leeming")) == 2
 
-@pytest.mark.parametrize('date, expected', [("2020-12-12T00:00:00Z",0),("2020-01-04T14:20:00Z",1),("",2)])
+@pytest.mark.parametrize('date, expected', [("2020-12-12T00:00:00Z",0),("2020-01-05T00:00:00Z",1),("",2)])
 def test_public_gist_with_history(date, expected):
     public_gists.user_timestamps={'leeming':date}
     assert len(public_gists.get_user_public_gist("leeming")) == expected

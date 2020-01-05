@@ -21,7 +21,7 @@ To enable debugging you can pass the `-v ` (`--verbose`) flag:
 python src/public_gist/public_gists.py -v leeming
 ```
 
-Any subsequent lookups for the same user's gists will only return new gists created after previously running the tool.
+Any subsequent lookups for the same user's gists will only return new gists published after previously running the tool.
 State is tracked by default in the '.gist_last_queried' pickle file (Pickle is a python serialization library - https://docs.python.org/3/library/pickle.html). If you want to reset the state, simply remove this file. The tool could be extended in the future to support resetting user state via commandline arguments.
 
 
@@ -42,9 +42,9 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-To be able to run the test suite install the dev dependencies
+To be able to run the test suite install the dev dependencies and run pytest
 ```
 pip install -r requirements-dev.txt
-```
-
 pip install -e .
+pytest tests/test_app.py
+```
